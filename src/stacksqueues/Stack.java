@@ -37,5 +37,13 @@ public class Stack {
         return stackArray[top];
     }
 
-    
+    //check if stack is empty
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    //check if stack is full
+    public boolean isFull() {
+        return top == maxSize - 1;
+    }
 }
