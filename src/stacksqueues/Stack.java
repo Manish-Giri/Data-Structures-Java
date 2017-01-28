@@ -47,7 +47,13 @@ public class Stack {
 
     //peek - display item at top of stack, without removing it
     public int peek() {
-        return stackArray[top];
+        //ensure stack isn't empty, else will throw an exception if a non existent item is accessed
+        if(!isEmpty()) {
+            return stackArray[top];
+        }
+        else {
+            return -1;
+        }
     }
 
     //check if stack is empty

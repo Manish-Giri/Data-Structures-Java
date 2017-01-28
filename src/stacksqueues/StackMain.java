@@ -26,7 +26,7 @@ public class StackMain {
             System.out.println("Deleted = " + stack.pop());
         }
 
-        //System.out.println(stack.peek());
+        System.out.println(stack.peek());
 
     }
 }
