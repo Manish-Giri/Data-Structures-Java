@@ -16,6 +16,17 @@ public class StackMain {
 
         System.out.println(stack.peek());
 
+        //add another item - should error
+        stack.push(60);
+
+        System.out.println(stack.peek());
+
+        //delete 5 items
+        while(!stack.isEmpty()) {
+            System.out.println("Deleted = " + stack.pop());
+        }
+
+        //System.out.println(stack.peek());
 
     }
 }
