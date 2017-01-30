@@ -52,9 +52,12 @@ class Queue {
 
     }
 
-    public int remove() {
-        //remove item at FRONT of queue
 
+    /**
+     * remove item at FRONT of queue
+     * @return
+     */
+    public int remove() {
 
         int removed = queueArray[front];
         //incrememnt front
@@ -67,6 +70,38 @@ class Queue {
         //decrease number of items in queue
         nItems--;
         return removed;
+    }
+
+    /**
+     * return the item at the front of the queue, without removing it
+     * @return
+     */
+    public int peekFront() {
+       return queueArray[front];
+    }
+
+    /**
+     * check if queue is empty
+     * @return
+     */
+    public boolean isEmpty() {
+        return nItems == 0;
+    }
+
+    /**
+     * check if queue is full
+     * @return
+     */
+    public boolean isFull() {
+        return nItems == maxSize;
+    }
+
+    /**
+     * return current size of queue
+     * @return
+     */
+    public int size() {
+        return nItems;
     }
 
 }
