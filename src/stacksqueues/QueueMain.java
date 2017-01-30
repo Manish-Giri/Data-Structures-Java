@@ -34,6 +34,23 @@ class Queue {
     }
 
     //queue methods - insert, remove, isEmpty, isFull, peekFront, size
+    public void insert(int item) {
+        //for a circular queue, REAR should wraparound to 0 if there is space in queue
+        //check if REAR is at maxsize already
+        if(rear == maxSize - 1) {
+            //setup rear to -1, such that next item inserted will be at 0
+            rear = -1;
+        }
+
+        //to add an item to queue, first incrememnt rear, then add item at that position in array
+        //TODO: //test with single line notation
+        rear++;
+        queueArray[rear] = item;
+
+        //increment number of items in queue
+        nItems++;
+
+    }
 
 }
 public class QueueMain {
