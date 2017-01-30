@@ -81,6 +81,14 @@ class Queue {
     }
 
     /**
+     * return the item at the rear of the queue, without removing it
+     * @return
+     */
+    public int peekRear() {
+        return queueArray[rear];
+    }
+
+    /**
      * check if queue is empty
      * @return
      */
@@ -119,5 +127,7 @@ public class QueueMain {
 
         //check item at front
         System.out.println(queue.peekFront());
+        //check item at rear
+        System.out.println(queue.peekRear());
     }
 }
