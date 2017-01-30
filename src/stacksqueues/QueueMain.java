@@ -8,7 +8,32 @@ package stacksqueues;
  */
 
 class Queue {
-    
+
+    //member variables
+    //max sixe of queue
+    private int maxSize;
+    //array to implement queue with
+    private int[] queueArray;
+    //pointer to front of queue - where items will  be removed from
+    private int front;
+    //pointer to rear of queue - where items will be inserted into
+    private int rear;
+    //number of items in queue
+    private int nItems;
+
+    //constructor
+    public Queue(int size) {
+        maxSize = size;
+        queueArray = new int[maxSize];
+        //at the start, there would be no items in queue
+        nItems = 0;
+        //and front will be at 0 (by default)
+        front = 0;
+        //and rear will be at -1
+        rear = -1;
+    }
+
+    //queue methods - insert, remove, isEmpty, isFull, peekFront, size
 
 }
 public class QueueMain {
