@@ -106,4 +106,18 @@ class Queue {
 
 }
 public class QueueMain {
+
+    public static void main(String[] args) {
+        //create Queue with size 5
+        Queue queue = new Queue(5);
+
+        //insert 4 items
+        queue.insert(10);
+        queue.insert(20);
+        queue.insert(30);
+        queue.insert(40);
+
+        //check item at front
+        System.out.println(queue.peekFront());
+    }
 }
