@@ -129,5 +129,34 @@ public class QueueMain {
         System.out.println(queue.peekFront());
         //check item at rear
         System.out.println(queue.peekRear());
+
+        //remove 3 items
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Removed = " + queue.remove());
+        }
+
+
+        //check item at front
+        System.out.println("Front = " + queue.peekFront());
+        //check item at rear
+        System.out.println("Rear = " + queue.peekRear());
+
+        System.out.println("*********");
+
+        //added 4 items, removed 3 - adding more items should cause wraparound
+        //add 4 more items - 50,60,70,80
+        for (int i = 50; i <= 80; i += 10) {
+            queue.insert(i);
+        }
+
+        System.out.println("Current size of queue = " + queue.size());
+
+
+        //check item at front
+        System.out.println("Front = " + queue.peekFront());
+        //check item at rear
+        System.out.println("Rear = " + queue.peekRear());
     }
-}
+
+
+    }
