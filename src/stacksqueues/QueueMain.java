@@ -52,6 +52,23 @@ class Queue {
 
     }
 
+    public int remove() {
+        //remove item at FRONT of queue
+
+
+        int removed = queueArray[front];
+        //incrememnt front
+        front++;
+        //circular queue - when FRONT is at maxsize, it should wraparound to 0
+        //TODO: why not maxSize-1?
+        if(front == maxSize) {
+            front = 0;
+        }
+        //decrease number of items in queue
+        nItems--;
+        return removed;
+    }
+
 }
 public class QueueMain {
 }
