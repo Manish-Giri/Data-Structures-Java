@@ -5,7 +5,21 @@ package stacksqueues;
  */
 
 class PriorityQueue {
-    
+
+    //size of array
+    private int maxSize;
+    //array for PQ
+    private int[] pqArray;
+    //size of queue
+    private int nItems;
+
+    //constructor
+    PriorityQueue(int size) {
+        maxSize = size;
+        pqArray = new int[maxSize];
+        //number f items is 0 at first
+        nItems = 0;
+    }
 }
 
 
