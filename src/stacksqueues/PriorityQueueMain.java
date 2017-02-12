@@ -80,15 +80,11 @@ class PriorityQueue {
 
 
     public int remove() {
-        System.out.println("front = " + front);
-        int item = pqArray[front++];
-        nItems--;
-
-        return item;
+        return pqArray[--nItems];
     }
 
     public int peek() {
-        return pqArray[front];
+        return pqArray[nItems-1];
     }
 
     public boolean isFull() {
