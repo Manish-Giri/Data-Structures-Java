@@ -33,14 +33,14 @@ public class LinkedListSecondApp {
      * class LINKEDLIST to represent the list
      * double ended list - contain reference to FIRST and LAST link in list
      */
-    private class LinkedList {
+    private class DoubleEndedList {
         //reference to first link in list
         private Link first;
         //reference to last link in list
         private Link last;
 
         //constructor
-        LinkedList() {
+        DoubleEndedList() {
             first = null;
             last = null;
         }
@@ -56,7 +56,37 @@ public class LinkedListSecondApp {
             System.out.println();
         }
 
-        
+        private boolean isEmpty() {
+            return first == null;
+        }
+
+        /**
+         * double ended list has access to first and last links, so LINKs can be added
+         * to the front and the end
+         */
+        private void insertFirst(int key) {
+            Link newLink = new Link(key);
+
+            //if list is empty, last will refer to this link
+            if(isEmpty()) {
+                last = newLink;
+            }
+            newLink.next = first;
+            first = newLink;
+        }
+
+        /**
+         * insert at the end of the list
+         */
+        private void insertLast(int key) {
+            Link newLink = new Link(key);
+            //if list is empty, first will refer to this link
+            if(isEmpty()) {
+                first = newLink;
+            }
+        }
+
+
 
     }
 }
