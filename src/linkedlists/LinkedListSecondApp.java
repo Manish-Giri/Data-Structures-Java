@@ -94,7 +94,20 @@ public class LinkedListSecondApp {
             last = newLink;
         }
 
+        /**
+         * delete from front of list
+         */
+        private int deleteFirst() {
+            //assumes non empty list
+            int temp = first.iData;
+            //if only 1 item in list, first/last will be null
+            if(first.next == null) {
+                last = null;
+            }
+            first = first.next;
+            return temp;
 
+        }
 
     }
 }
