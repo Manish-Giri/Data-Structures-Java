@@ -126,5 +126,12 @@ public class LinkedListSecondApp {
 
         //display list - order should be 66,44,22,55,77
         doubleEndedList.displayList();
+
+        //delete two items from first
+        doubleEndedList.deleteFirst();
+        doubleEndedList.deleteFirst();
+
+        //display list - new order - 22,55,77
+        doubleEndedList.displayList();
     }
 }
