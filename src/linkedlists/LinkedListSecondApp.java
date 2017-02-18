@@ -80,10 +80,18 @@ public class LinkedListSecondApp {
          */
         private void insertLast(int key) {
             Link newLink = new Link(key);
-            //if list is empty, first will refer to this link
+            //if list is empty, first will refer to newLink, and last is null
             if(isEmpty()) {
                 first = newLink;
             }
+            else {
+                //if list is not empty, last is not null
+                //old last's next to point to newLink
+                last.next = newLink;
+
+            }
+            ////new last is this link - common in empty/non-empty list
+            last = newLink;
         }
 
 
