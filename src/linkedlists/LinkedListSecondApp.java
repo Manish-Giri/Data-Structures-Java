@@ -110,4 +110,21 @@ public class LinkedListSecondApp {
         }
 
     }
+
+    public static void main(String[] args) {
+        LinkedListSecondApp secondApp = new LinkedListSecondApp();
+        LinkedListSecondApp.DoubleEndedList doubleEndedList = secondApp.new DoubleEndedList();
+
+        //insert three items at front
+        doubleEndedList.insertFirst(22);
+        doubleEndedList.insertFirst(44);
+        doubleEndedList.insertFirst(66);
+
+        //insert three items at the end
+        doubleEndedList.insertLast(55);
+        doubleEndedList.insertLast(77);
+
+        //display list - order should be 66,44,22,55,77
+        doubleEndedList.displayList();
+    }
 }
