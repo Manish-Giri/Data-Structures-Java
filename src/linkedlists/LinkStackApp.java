@@ -24,6 +24,25 @@ public class LinkStackApp {
         }
     }
 
+    /**
+     * LinkedList class
+     * @param 
+     */
+
+    private class LinkedList {
+        // a stack needs only a reference to the first link
+        private Link first;
+
+        LinkedList() {
+            first = null;
+        }
+
+        // check if LL is empty
+        boolean isEmpty() {
+            return first == null;
+        }
+    }
+
 
     public static void main(String[] args) {
 
