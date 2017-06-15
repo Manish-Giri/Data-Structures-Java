@@ -99,6 +99,21 @@ public class LinkStackApp {
 
     private class LinkStackInterface {
         LinkedList linkedList = new LinkedList();
+
+        // stack push operation - as visible to user
+        void push(int item) {
+            linkedList.insertFront(item);
+        }
+
+        // stack pop operation - as visible to user
+        int pop() {
+            return linkedList.deleteFront();
+        }
+
+        // display stack
+        void display() {
+            linkedList.displayList();
+        }
     }
 
 
