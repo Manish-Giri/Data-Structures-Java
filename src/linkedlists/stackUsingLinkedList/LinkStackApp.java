@@ -1,4 +1,4 @@
-package linkedlists;
+package linkedlists.stackUsingLinkedList;
 
 /**
  * Created by manishgiri on 2/18/17.
@@ -90,6 +90,15 @@ public class LinkStackApp {
             }
         }
 
+    }
+
+    /**
+     * Class LinkStackInterface
+     * simulates Stack by using LL and it's methods
+     */
+
+    private class LinkStackInterface {
+        LinkedList linkedList = new LinkedList();
     }
 
 
