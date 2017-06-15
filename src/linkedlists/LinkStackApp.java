@@ -26,7 +26,7 @@ public class LinkStackApp {
 
     /**
      * LinkedList class
-     * @param 
+     * @param
      */
 
     private class LinkedList {
@@ -41,6 +41,24 @@ public class LinkStackApp {
         boolean isEmpty() {
             return first == null;
         }
+
+        // stack push - insert at front of list
+        void insertFront(int data) {
+            Link newLink = new Link(data);
+
+            // if LL empty - newNode is first
+            if(isEmpty()) {
+                first = newLink;
+            }
+
+            // else - change references to make this as first
+            else {
+                newLink.next = first;
+                first = newLink;
+            }
+        }
+
+        
     }
 
 
