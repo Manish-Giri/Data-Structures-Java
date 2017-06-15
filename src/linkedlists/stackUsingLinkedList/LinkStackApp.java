@@ -140,6 +140,13 @@ public class LinkStackApp {
         // display
         stack.display();
 
+        // delete 2 items and display
+        System.out.println("\nDeleted = " + stack.pop());
+        System.out.println("Deleted = " + stack.pop());
+
+        // display
+        stack.display();
+
 
     }
 }
