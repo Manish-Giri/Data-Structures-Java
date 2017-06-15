@@ -58,7 +58,30 @@ public class LinkStackApp {
             }
         }
 
-        
+        // stack pop - delete from front of list
+        int deleteFront() {
+            Link temp = first;
+
+            // if LL empty
+            if(isEmpty()) {
+                return -1;
+            }
+
+            // else - if only one item in LL
+            if(first.next == null) {
+                first = null;
+            }
+
+            // else make next node as first
+            else {
+                first = first.next;
+            }
+
+            return temp.iData;
+            
+        }
+
+
     }
 
 
