@@ -20,7 +20,7 @@ public class LinkStackApp {
         }
 
         private void displayLink() {
-            System.out.println("{ " + iData + " }");
+            System.out.print("{" + iData + "} ");
         }
     }
 
@@ -118,6 +118,28 @@ public class LinkStackApp {
 
 
     public static void main(String[] args) {
+
+        // create objects
+        LinkStackApp stackApp = new LinkStackApp();
+        LinkStackInterface stack = stackApp.new LinkStackInterface();
+
+        // add 2 items
+        stack.push(10);
+        stack.push(20);
+
+        // display
+        // stack.display();
+
+        // add 5 items
+        stack.push(30);
+        stack.push(40);
+        stack.push(50);
+        stack.push(60);
+        stack.push(70);
+
+        // display
+        stack.display();
+
 
     }
 }
