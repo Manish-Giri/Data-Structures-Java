@@ -78,9 +78,17 @@ public class LinkStackApp {
             }
 
             return temp.iData;
-            
+
         }
 
+        // display LL
+        void displayList() {
+            Link current = first;
+            while (current != null) {
+                current.displayLink();
+                current = current.next;
+            }
+        }
 
     }
 
