@@ -25,4 +25,16 @@ public class LinkQueueApp {
         }
     }
 
+    /**
+     * Class LinkedList to implement LL
+     * insert at last, delete from front - requires two references to head and tail
+     */
+    private class LinkedList {
+
+        private Link first;
+        private Link last;
+
+        
+    }
+
 }
