@@ -34,7 +34,37 @@ public class LinkQueueApp {
         private Link first;
         private Link last;
 
-        
+        // constructor
+        LinkedList() {
+            first = null;
+            last = null;
+        }
+
+        // check if LL is empty
+        boolean isEmpty() {
+            return first == null;
+        }
+
+        // insert at the end of queue
+        void insertLast(int item) {
+            Link newLink = new Link(item);
+
+            // if LL is empty - first should be this new link
+            if(isEmpty()) {
+                first = newLink;
+            }
+
+            // else - add to next of current last
+            else {
+                last.next = newLink;
+            }
+
+            // make this newLink as new last
+            last = newLink;
+            
+        }
+
+
     }
 
 }
